@@ -1,13 +1,12 @@
-package src;
+package Pruebas_semana;
 
 import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
 
 class HelloWorld {
 
     public static void main(String[] args) {
-        // JOptionPane.showMessageDialog(null,"Hello World");
-        int var = 1;
+        JOptionPane.showMessageDialog(null,"Hello World");
+        
         Estudiante estudiante = new Estudiante();
         estudiante.setId(1);
         estudiante.nombre = "Jhon";

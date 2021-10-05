@@ -1,3 +1,7 @@
 {
-    "spring-boot.ls.checkJVM": false
+    "spring-boot.ls.checkJVM": false,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        ".lib/junit-platform-console-standalone-1.8.1.jar"
+    ]
 }

@@ -1,4 +1,4 @@
-package src;
+package Pruebas_semana;
 
 public class Persona {
     private int id = 0;
