@@ -1,3 +1,5 @@
+package src;
+
 public class Persona {
     private int id = 0;
     String nombre = "";
