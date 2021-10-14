@@ -1,5 +1,7 @@
-package Entity;
+package Ejercicio_1;
 
-public class Persona {
-
+public abstract class Persona {
+    String nombre;
+    int cedula;
+    short edad;
 }
