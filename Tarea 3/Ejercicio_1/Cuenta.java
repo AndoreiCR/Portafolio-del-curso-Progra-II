@@ -1,28 +1,15 @@
 package Ejercicio_1;
 
-import javax.swing.JOptionPane;
+public abstract class Cuenta {
+    public int estadoCuenta;
 
-public class Cuenta extends Persona {
-
-    private String numCuenta = "CR95781531798562";
-    private String tipoCuenta = "Ahorros";
-    private String moneda = "Colones";
-    private int estadoCuena, monto;
-
-    public Cuenta() {
-
+    public int getEstadoCuenta() {
+        return estadoCuenta;
     }
 
-    public void desplegarMenu() {
-        int opc = Integer.parseInt(
-                JOptionPane.showInputDialog(null, "Ingrese la opcion a realizar\n" + "1. Depositar\n" + "2. Retiro"));
-        acciones(opc);
+    public void setEstadoCuenta(int estadoCuenta) {
+        this.estadoCuenta = estadoCuenta;
     }
 
-    protected void acciones(int opcion) {
-        switch(opcion){
-            case 1: monto = Integer.parseInt(JOptionPane.showInputDialog(null, "Deposito a Realizar\n"+"Ingrese el monto"));
-        }
-    }
-
+    
 }
