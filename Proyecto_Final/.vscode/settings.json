@@ -1,0 +1,9 @@
+{
+    "spring-boot.ls.checkJVM": false,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\dvarela\\OneDrive - Comision Nacional de Emergencias\\Documentos\\GitHub\\Portafolio-del-curso-Progra-II\\Semana 6\\lib\\junit-platform-console-standalone-1.8.1.jar",
+        "C:\\Users\\Personal\\OneDrive\\Documentos\\GitHub\\Portafolio-del-curso-Progra-II\\Semana 6\\lib\\junit-platform-console-standalone-1.8.1.jar"
+    ],
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true
+}
