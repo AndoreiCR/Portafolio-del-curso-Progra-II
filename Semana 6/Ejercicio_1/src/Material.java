@@ -1,28 +1,26 @@
-package Ejercicio_1.src;
-
 public class Material {
     public short puntosDurabilidad;
     public String nombre;
     public short rareza;
 
-    public void material(short puntosDurabilidad, String nombre) {
+    public Material(short valor1, String valor2) {
 
     }
 
-    public void material(short puntoDurabilidad, String nombre, short rareza) {
+    public Material(short valor1, String valor2, short valor3) {
 
     }
 
     public short getPuntosDurabilidad() {
-        return puntosDurabilidad;
+        return 0;
     }
 
     public String getNombre() {
-        return nombre;
+        return null;
     }
 
     public short getRareza() {
-        return rareza;
+        return 0;
     }
 
 }

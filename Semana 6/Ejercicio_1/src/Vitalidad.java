@@ -1,25 +1,23 @@
-package Ejercicio_1.src;
-
 public class Vitalidad {
     private short puntosMagia, puntosVida, puntosFuerza, puntosAgilidad;
 
-    public void vitalidad(short puntosMagia, short puntosVida, short puntosFuerza, short puntosAgilidad) {
+    public Vitalidad(short valor1, short valor2, short valor3, short valor4) {
 
     }
 
-    public short getPuntosMagia() {
+    public int getPuntosMagia() {
         return puntosMagia;
     }
 
-    public short getPuntosVida() {
+    public int getPuntosVida() {
         return puntosVida;
     }
 
-    public short getPuntosFuerza() {
+    public int getPuntosFuerza() {
         return puntosFuerza;
     }
 
-    public short getPuntosAgilidad() {
+    public int getPuntosAgilidad() {
         return puntosAgilidad;
     }
 

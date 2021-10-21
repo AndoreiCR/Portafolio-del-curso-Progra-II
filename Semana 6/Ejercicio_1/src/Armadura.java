@@ -1,16 +1,24 @@
-package Ejercicio_1.src;
+public class Armadura extends Vitalidad {
 
-public class Armadura {
-    private Material material = new Material();
+    private Material material;
     public String color;
 
-    public void armadura(short puntosVida,short puntosMagia,short puntosAgilidad,short puntoVida){
+    public Armadura(short valor1, short valor2, short valor3, short valor4) {
+        super(valor1, valor2, valor3, valor4);
+        // TODO Auto-generated constructor stub
+    }
+
+    public Armadura(short valor1, short valor2, short valor3, short valor4, Material valor5) {
+        super(valor1, valor2, valor3, valor4);
+        // TODO Auto-generated constructor stub
+    }
+
+    public void armadura(short valor1, short valor2, short valor3, short valor4) {
 
     }
 
     public Material getMaterial() {
-        return material;
+        return this.material;
     }
 
-    
 }
