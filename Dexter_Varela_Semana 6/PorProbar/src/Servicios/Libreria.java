@@ -1,3 +1,6 @@
+package Servicios;
+import Entidades.Libro;
+
 public class Libreria {
     public void prestar(Libro ejemplar) throws Exception{
         if(ejemplar.getPrestado())
@@ -7,7 +10,7 @@ public class Libreria {
 
     public void devolver(Libro ejemplar) throws Exception{
         if(!ejemplar.getPrestado())
-            throw new Exception("No puede devolverse un libro ya prestado");
+            throw new Exception("No puede devolverse un libro que aun no ha prestado");
         ejemplar.setPrestado(false);
     }
 }
