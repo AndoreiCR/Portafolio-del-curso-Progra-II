@@ -1,5 +1,8 @@
+package Entities;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        juego j = new juego();
+        j.jugar();
     }
 }
