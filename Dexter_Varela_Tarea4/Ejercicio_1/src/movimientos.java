@@ -1,5 +1,3 @@
-package Ejercicio_1;
-
 import javax.swing.JOptionPane;
 
 public class movimientos extends Cuenta{

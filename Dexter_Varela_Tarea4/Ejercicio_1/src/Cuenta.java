@@ -1,5 +1,3 @@
-package Ejercicio_1;
-
 public abstract class Cuenta {
     public int estadoCuenta;
 
