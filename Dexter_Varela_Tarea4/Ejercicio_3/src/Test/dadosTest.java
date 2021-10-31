@@ -1,11 +1,10 @@
 package Test;
 
+import org.junit.Test;
 import javax.swing.JOptionPane;
 
-import org.junit.Test;
-
 public class dadosTest {
-    int eleccion, ultimoTiro,salir = 0;
+    int eleccion, ultimoTiro, salir = 0;
 
     @Test
     public void alterado() {
@@ -41,13 +40,15 @@ public class dadosTest {
         int confirmado = JOptionPane.showConfirmDialog(null, "¿Tirar el dado");
 
         if (JOptionPane.OK_OPTION == confirmado) {
-            while (salir == 0 ) {
-                eleccion = (int) (Math.random() * 6 +1 );
+            while (eleccion <= ultimoTiro) {
+                eleccion = (int) (Math.random() * 6 + 1);
                 JOptionPane.showMessageDialog(null, "El resultado de tirar el dado fue: " + eleccion);
-                ultimoTiro = eleccion;
-                if(eleccion>ultimoTiro){
+                // ultimoTiro = eleccion;
+                if (eleccion >= ultimoTiro) {
+                    JOptionPane.showMessageDialog(null, "El resultado de tirar el dado fue: " + eleccion);
                     salir = 1;
                 }
+                ultimoTiro = eleccion;
             }
         } else {
             JOptionPane.showMessageDialog(null, "Saliendo del sistema");
