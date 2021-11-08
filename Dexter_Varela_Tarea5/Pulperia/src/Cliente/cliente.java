@@ -44,8 +44,6 @@ public class cliente extends informacionCliente implements eliminable, mostrable
         try {
             if (getId() == 0) {
                 setId(1);
-            } else if (getIdC() != 0) {
-                setId(getIdC());
             } else {
                 setId(id + 1);
             }
