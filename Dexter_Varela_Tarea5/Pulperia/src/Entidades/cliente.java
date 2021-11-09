@@ -3,6 +3,8 @@ package Cliente;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Interfaces.*;
+
 public class cliente extends informacionCliente implements eliminable, mostrable, registrable, modificable {
 
     Scanner scanner = new Scanner(System.in);
