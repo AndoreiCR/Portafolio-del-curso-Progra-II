@@ -1,4 +1,5 @@
-package Cliente;
+package Entidades;
+
 import java.util.Scanner;
 
 public class menuPrincipal {
@@ -21,6 +22,8 @@ public class menuPrincipal {
             c.menuRegistroClientes();
             break;
         case 2:
+            ventasAcontado vac = new ventasAcontado();
+            vac.menuVentasAContado();
             break;
         case 3:
             break;

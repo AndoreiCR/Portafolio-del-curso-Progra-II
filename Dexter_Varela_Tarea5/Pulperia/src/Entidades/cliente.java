@@ -1,4 +1,4 @@
-package Cliente;
+package Entidades;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import Interfaces.*;
 public class cliente extends informacionCliente implements eliminable, mostrable, registrable, modificable {
 
     Scanner scanner = new Scanner(System.in);
-    private int opc;
+    private int opc, i,index=0;
     menuPrincipal mP = new menuPrincipal();
     ArrayList<cliente> Cliente = new ArrayList<>();
     cliente auxCliente;
@@ -46,7 +46,9 @@ public class cliente extends informacionCliente implements eliminable, mostrable
         try {
             if (getId() == 0) {
                 setId(1);
-            } else {
+            } else if(getIdC() != 0) {
+                id = getIdC();
+            }else{
                 setId(id + 1);
             }
             auxCliente = new cliente();
@@ -59,17 +61,18 @@ public class cliente extends informacionCliente implements eliminable, mostrable
             auxCliente.setCorreo(scanner.next());
             Cliente.add(auxCliente);
             System.out.println("Cliente agregado satisfactoriamente");
-        } catch (Exception e) {
+            index++;
+
+        } catch (final Exception e) {
             System.out.println(" " + e);
         }
         setIdC(0);
         menuRegistroClientes();
-        
     }
 
     @Override
     public void mostrar() {
-        for (int i = 0; i < getId(); i++) {
+        for (int i = 0; i < index; i++) {
             System.out.println("Id del cliente: " + Cliente.get(i).getId() + " Nombre: " + Cliente.get(i).getNombre());
         }
         menuRegistroClientes();
@@ -77,21 +80,31 @@ public class cliente extends informacionCliente implements eliminable, mostrable
 
     @Override
     public void eliminar() {
-        for (int i = 0; i < getId(); i++) {
+        for (i = 0; i < index; i++) {
             System.out.println("Id del cliente: " + Cliente.get(i).getId() + " Nombre: " + Cliente.get(i).getNombre());
         }
+        System.out.println("Ingrese el ID del cliente a eliminar");
+        setIdC(scanner.nextInt());
+        Cliente.remove(getIdC() - 1);
+        index--;
+        menuRegistroClientes();
     }
 
     @Override
     public void modificar() {
-
-        for (int i = 0; i < getId(); i++) {
-            System.out.println("Id del cliente: " + Cliente.get(i).getId() + " Nombre: " + Cliente.get(i).getNombre()
-                    + " Telefono: " + Cliente.get(i).getTelefono() + " Correo: " + Cliente.get(i).getCorreo());
+        try {
+            for (i = 0; i < index; i++) {
+                System.out.println("Id del cliente: " + Cliente.get(i).getId() + " Nombre: "
+                        + Cliente.get(i).getNombre() + " Telefono: " + Cliente.get(i).getTelefono() + " Correo: "
+                        + Cliente.get(i).getCorreo());
+            }
+            System.out.println("Ingrese el ID del cliente a modificar");
+            setIdC(scanner.nextInt());
+            registrar();
+        } catch (final Exception e) {
+            System.out.println(" " + e);
         }
-        System.out.println("Ingrese el ID del cliente a modificar");
-        setIdC(scanner.nextInt());
-        registrar();
+
     }
 
 }

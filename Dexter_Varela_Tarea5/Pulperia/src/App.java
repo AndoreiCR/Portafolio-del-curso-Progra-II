@@ -1,4 +1,4 @@
-import Cliente.menuPrincipal;
+import Entidades.menuPrincipal;
 
 public class App {
     public static void main(String[] args) throws Exception {

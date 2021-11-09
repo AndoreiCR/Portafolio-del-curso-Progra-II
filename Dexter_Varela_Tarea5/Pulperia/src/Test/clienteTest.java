@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import org.junit.Test;
 
-import Cliente.cliente;
-import Cliente.informacionCliente;
+import Entidades.cliente;
+import Entidades.informacionCliente;
 
 public class clienteTest extends informacionCliente {
     Scanner scanner = new Scanner(System.in);

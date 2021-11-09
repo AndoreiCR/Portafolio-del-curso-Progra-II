@@ -1,4 +1,4 @@
-package Cliente;
+package Entidades;
 public abstract class informacionCliente {
     protected String nombre, correo;
     protected int id, telefono,idC;
@@ -43,4 +43,5 @@ public abstract class informacionCliente {
         this.idC = idC;
     }
 
+    
 }
